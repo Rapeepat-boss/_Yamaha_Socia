@@ -1,0 +1,128 @@
+.slide-container {
+  position: relative;
+  width: 100vw; /* ความกว้างเต็มหน้าจอ */
+  height: 50vh; /* ความสูง 50% ของหน้าจอ */
+  margin: 0; /* ไม่มีช่องว่างรอบนอก */
+  overflow: hidden; /* ซ่อนเนื้อหาที่เกินขอบ */
+}
+
+.slide img {
+  width: 100vw; /* ขยายรูปภาพให้กว้างเต็มพื้นที่ */
+  height: 50vh; /* ปรับความสูงตาม container */
+  object-fit: contain; /* ครอบคลุมพื้นที่ทั้งหมดโดยไม่บิดเบือน */
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px; 
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5); 
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1;
+}
+
+.prev {
+  left: 20px; /* ตำแหน่งปุ่มด้านซ้าย */
+}
+
+.next {
+  right: 20px; /* ตำแหน่งปุ่มด้านขวา */
+}
+
+.indicators {
+  text-align: center;
+  position: absolute;
+  bottom: 20px; /* ตำแหน่งที่ห่างจากด้านล่าง */
+  width: 100%;
+}
+
+.indicators span {
+  display: inline-block;
+  width: 15px; /* ขนาดจุด */
+  height: 15px;
+  margin: 0 5px;
+  background-color: rgb(117, 117, 117);
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.indicators .active {
+  opacity: 1;
+  border: 1px solid rgb(5, 5, 5);
+  background-color: red; /* เปลี่ยนสีจุดเมื่อเลือก */
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* พื้นหลังโปร่ง */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: #ffffff; /* สีพื้นหลัง */
+  padding: 20px;
+  border-radius: 10px; /* มุมโค้งมน */
+  width: 80%; /* ความกว้างของป็อปอัพ */
+  max-width: 1000px;
+  max-height: 100vh; /* จำกัดความสูง */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.popup-content img {
+  width: 60vw;
+  height: 60vh;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* เงาของรูปภาพ */
+}
+
+.popup-content p {
+  margin: 0;
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+  overflow-y: auto; /* เปิดใช้งานการเลื่อน */
+  max-height: 300px; /* จำกัดความสูงของข้อความ */
+  border: 1px solid #ddd; /* เส้นขอบของข้อความ */
+  border-radius: 5px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: #ff0000; /* เปลี่ยนสีปุ่มปิดเมื่อเลื่อนเมาส์ */
+}
+
+.popup-image {
+  width: 50vw;
+  height: 50vh;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* เงาของรูปภาพ */
+  object-fit: cover;
+}

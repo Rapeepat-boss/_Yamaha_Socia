@@ -1,0 +1,71 @@
+.approve-container {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.approve-container h1 {
+    text-align: center;
+    color: #333;
+}
+
+.approve-post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.approve-image {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.approve-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.approve-button:hover {
+    background-color: #218838;
+}
+
+.approve-container p {
+    color: #666;
+    text-align: center;
+}
+
+.Back-button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #ec3d4c; /* สีแดง */
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.reject-button {
+    background-color: #fe4141;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 20px;
+}
